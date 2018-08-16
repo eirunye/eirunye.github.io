@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Spring Boot 项目创建(二)]]></title>
+    <url>%2F2018%2F08%2F14%2FSpring-Boot-%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA-%E4%BA%8C%2F</url>
+    <content type="text"><![CDATA[如何创建Spring Boot 项目？接下来我们将学习如何创建第一个Spring Boot项目 hello Spring Boot! 呢？ 我们将以 IntelliJ IDEA 开发工具为例创建Spring Boot项目 如果还没下载过IntelliJ IDEA,那么打开下载即可。 IntelliJ IDEA 破解码，这个之前是可以用的，谢谢作者分享，不知道还能不能用。 一切准备完成后，开始使用开发之旅吧。 IDEA创建Spring Boot项目流程如图所示 File —–&gt; New ——&gt; Project… 选择 Spring Initializr Project Matedata 选择Web —–&gt; Web —–&gt; Spring Boot版本(默认即可) 选择项目保存的文件夹 创建完成 查看项目目录12345678910|--src:源代码文件 |--main |--java:项目的代码Java代码编写在这里 |--resources:一般是配置文件等 |--static:静态资源文件(js、css、img) |--template:模板(.html等) |--application.properties: 配置文件 |--test:主要是用于测试|--target:是项目打包生成的.jar文件在这里|--pom.xml:是添加依赖文件、版本号、打包设置为Jar或者War等 (如下图:pom.xml.png) 查看 pom.xml 编辑配置application.properties 文件 一般需要配置一些端口，数据库连接、编码方式等，如下图123456#设置端口server.port=8084#session失效时间server.session-timeout=3000#编码方式server.tomcat.uri-encoding=utf-8 程序的入口文件 编写简单的例子 如下图所示:12345创建一个controller 包，在包下创建 HelloController.class添加注解: @RestController ----&gt;默认Json格式数据 @GetMapping(value = &quot;/hello&quot;) &apos;hello&apos;:表示访问路径 解下来的文章会讲述到更多的注解...... 测试运行是否正常 如下图 访问测试:1浏览器访问 1IDEA 自带的访问(推荐) 1Postman 访问(推荐) 下载安装 Postman 本例项目下载demo 总结 在IDEA开发工具中构建Spring Boot非常简单，推荐大家使用IDEA(Eclipse创建项目在这里不举例了)。 接下来讲解的是Spring Boot 的相关配置。]]></content>
+      <categories>
+        <category>后台</category>
+        <category>Spring Boot</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring Boot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Spring Boot 认识(一)]]></title>
+    <url>%2F2018%2F08%2F14%2FSpring-Boot-knowledge-1%2F</url>
+    <content type="text"><![CDATA[SpringMVC 、Spring Boot 、SpringCloud 认识最近开发项目一直用到了Spring Boot脚手架工具，让我们来认识它一下吧，进入Spring Boot开发之旅。 认识Spring Boot Spring Boot 是由 Pivotal 团队提供的全新框架，其目的是用来简化新 Spring 应用的初始搭建以及开发过程。 Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can “just run”. 在开发中给了我们很大的便利，不用进行过多的配置，和繁琐的设置，非常方便我们学习了开发项目。 总结一下几点非常棒: 1234入门简单开发效率高无须额外的配置监控运行过程等 Spring Boot 和Spring MVC区别 Spring MVC 123Spring MVC 是Spring的一个模块，是一种解决Web开发应用的框架。这种开发模式层次分明，轻度解耦，为Web应用提供了许多模板，减轻了开发难度，但是Spring都要进行复杂的XML、JavaConfig等资源的配置。Spring MVC 框架使用IOC对控制逻辑和业务提供了全面的分离，从而很好的解决了复杂错乱的问题。Spring MVC 需要过分的配置，导致花费更多的时间，效率低下。 Spring Boot 12345Spring Boot 创建完成后，提供了许多复杂的配置，降低了开发的进度和成本。例如: Spring Boot创建完成后，可以集成JDBC、Redis、MySQL、JackJson等等这些配置，让我们在开发过程中收益，只要关注业务，完成相关业务即可，从而不必担心配置的问题。Spring Boot 可以直接独立运行，简单即可。Spring Boot 是Spring的一套快速配置脚手架框架，Spring Boot 提供了一系列的相关配置，还有相关了Maven依赖，完全可靠，开发功能和Spring MVC相关功能兼容。Spring Boot 提供了基于http、ssh、telnet等对运行时的项目进行监控。Spring Boot 降低学习成本，快速入手开发项目，没有繁琐的配置(这是是广大开发者梦寐以求的) Spring Boot 和Spring Cloud区别Spring Cloud 1234Spring Cloud 是一种云端分布式架构的解决框架(称为微服务)。Spring Cloud 是一个基于 Spring Boot 框架实现云微服务应用开发的一套工具.Spring Cloud 主要是专注于服务之间的通讯、熔断、监控等全局的微服务治理框架。Spring Cloud 是不能离开Spring Boot这个环境的，Spring Cloud必须依赖于Spring Boot，但是Spring Boot可以离开Spring Cloud独立使用开发项目。 总结 各位读者如果有更好的见解可以留言，我们一起学习。 我们在不断的进步中，将会对Spring Boot系列进行深入的探究。]]></content>
+      <categories>
+        <category>后台</category>
+        <category>Spring Boot</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring Boot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F08%2F09%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment 测试]]></content>
+  </entry>
+</search>
