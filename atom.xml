@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Eirunye Activity</title>
+  
+  <subtitle>Notes</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://eirunye.github.io/"/>
+  <updated>2018-08-14T07:13:41.377Z</updated>
+  <id>http://eirunye.github.io/</id>
+  
+  <author>
+    <name>Eirunye</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring Boot 项目创建(二)</title>
+    <link href="http://eirunye.github.io/2018/08/14/Spring-Boot-%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA-%E4%BA%8C/"/>
+    <id>http://eirunye.github.io/2018/08/14/Spring-Boot-项目创建-二/</id>
+    <published>2018-08-14T03:49:36.000Z</published>
+    <updated>2018-08-14T07:13:41.377Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="如何创建Spring-Boot-项目？"><a href="#如何创建Spring-Boot-项目？" class="headerlink" title="如何创建Spring Boot 项目？"></a>如何创建Spring Boot 项目？</h1><p>接下来我们将学习如何创建第一个Spring Boot项目 <strong><em>hello Spring Boot!</em></strong> 呢？</p><p><img src="https://upload-images.jianshu.io/upload_images/3012005-ab363c756e658c99.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="Spring Boot.jpg"></p><h2 id="我们将以-IntelliJ-IDEA-开发工具为例创建Spring-Boot项目"><a href="#我们将以-IntelliJ-IDEA-开发工具为例创建Spring-Boot项目" class="headerlink" title="我们将以 IntelliJ IDEA 开发工具为例创建Spring Boot项目"></a>我们将以 IntelliJ IDEA 开发工具为例创建Spring Boot项目</h2><ol><li>如果还没下载过<a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">IntelliJ IDEA</a>,那么打开下载即可。</li><li><a href="http://idea.lanyus.com/" target="_blank" rel="noopener">IntelliJ IDEA 破解码</a>，这个之前是可以用的，谢谢作者分享，不知道还能不能用。</li><li>一切准备完成后，开始使用开发之旅吧。</li></ol><h2 id="IDEA创建Spring-Boot项目流程"><a href="#IDEA创建Spring-Boot项目流程" class="headerlink" title="IDEA创建Spring Boot项目流程"></a>IDEA创建Spring Boot项目流程</h2><p><strong>如图所示</strong></p><ol><li>File —–&gt; New ——&gt; Project…</li></ol><p><img src="https://upload-images.jianshu.io/upload_images/3012005-7742be37106c16f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="创建1.png"></p><ol start="2"><li>选择 Spring Initializr</li></ol><p><img src="https://upload-images.jianshu.io/upload_images/3012005-a8d88cb7188bd499.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="创建2.png"></p><ol start="3"><li>Project Matedata</li></ol><p><img src="https://upload-images.jianshu.io/upload_images/3012005-6887d50074b04b23.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="创建3.png"></p><ol start="4"><li>选择Web —–&gt; Web —–&gt; Spring Boot版本(默认即可)</li></ol><p><img src="https://upload-images.jianshu.io/upload_images/3012005-50a5a2138872929b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="创建4.png"></p><ol start="5"><li>选择项目保存的文件夹</li></ol><p><img src="https://upload-images.jianshu.io/upload_images/3012005-0cd4e1e9cb939640.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="创建5.png"></p><ol start="6"><li>创建完成 查看项目目录<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">|--src:源代码文件</span><br><span class="line">   |--main</span><br><span class="line">      |--java:项目的代码Java代码编写在这里</span><br><span class="line">      |--resources:一般是配置文件等</span><br><span class="line">         |--static:静态资源文件(js、css、img)</span><br><span class="line">         |--template:模板(.html等)</span><br><span class="line">         |--application.properties: 配置文件</span><br><span class="line">   |--test:主要是用于测试</span><br><span class="line">|--target:是项目打包生成的.jar文件在这里</span><br><span class="line">|--pom.xml:是添加依赖文件、版本号、打包设置为Jar或者War等 (如下图:pom.xml.png)</span><br></pre></td></tr></table></figure></li></ol><p><img src="https://upload-images.jianshu.io/upload_images/3012005-eeecc6cb6fc171dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="项目目录结构6.png"></p><ol start="7"><li>查看 pom.xml</li></ol><p><img src="https://upload-images.jianshu.io/upload_images/3012005-f339f5fbed904ad7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="pom.xml.png"></p><ol start="8"><li>编辑配置application.properties 文件 一般需要配置一些端口，数据库连接、编码方式等，如下图<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#设置端口</span><br><span class="line">server.port=8084</span><br><span class="line">#session失效时间</span><br><span class="line">server.session-timeout=3000</span><br><span class="line">#编码方式</span><br><span class="line">server.tomcat.uri-encoding=utf-8</span><br></pre></td></tr></table></figure></li></ol><p><img src="https://upload-images.jianshu.io/upload_images/3012005-041e35ae669efa54.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="application.properties.png"></p><ol start="9"><li>程序的入口文件</li></ol><p><img src="https://upload-images.jianshu.io/upload_images/3012005-15e6598f02ab7c2b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="程序入口Application.png"></p><ol start="10"><li>编写简单的例子 如下图所示:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">创建一个controller 包，在包下创建 HelloController.class</span><br><span class="line">添加注解:</span><br><span class="line">    @RestController ----&gt;默认Json格式数据</span><br><span class="line">    @GetMapping(value = &quot;/hello&quot;) &apos;hello&apos;:表示访问路径</span><br><span class="line">    解下来的文章会讲述到更多的注解......</span><br></pre></td></tr></table></figure></li></ol><p><img src="https://upload-images.jianshu.io/upload_images/3012005-0f3f42f1454efee5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="controller.class.png"></p><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="运行是否正常"><a href="#运行是否正常" class="headerlink" title="运行是否正常"></a>运行是否正常</h2><ol><li>如下图</li></ol><p><img src="https://upload-images.jianshu.io/upload_images/3012005-9bf6556f71b9fad4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="运行项目1.png"></p><p><img src="https://upload-images.jianshu.io/upload_images/3012005-5614d3b09ec72898.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="运行项目2.png"></p><ol start="2"><li>访问测试:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">浏览器访问</span><br></pre></td></tr></table></figure></li></ol><p><img src="https://upload-images.jianshu.io/upload_images/3012005-0a1c0d33cc3d922c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="访问结果1.png"><br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IDEA 自带的访问(推荐)</span><br></pre></td></tr></table></figure></p><p><img src="https://upload-images.jianshu.io/upload_images/3012005-9e8238ce358139eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="访问结果2.png"><br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Postman 访问(推荐)</span><br></pre></td></tr></table></figure></p><p><img src="https://upload-images.jianshu.io/upload_images/3012005-a5d90d90d61382ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="Postman访问3.png"></p><h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p><strong>安装 <a href="https://www.getpostman.com/" target="_blank" rel="noopener">Postman</a></strong></p><p><strong>本例项目<a href="https://github.com/iconye/springboot_hello" target="_blank" rel="noopener">下载demo</a></strong></p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>  在IDEA开发工具中构建Spring Boot非常简单，推荐大家使用IDEA(Eclipse创建项目在这里不举例了)。</p><p>  接下来讲解的是Spring Boot 的相关配置。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;如何创建Spring-Boot-项目？&quot;&gt;&lt;a href=&quot;#如何创建Spring-Boot-项目？&quot; class=&quot;headerlink&quot; title=&quot;如何创建Spring Boot 项目？&quot;&gt;&lt;/a&gt;如何创建Spring Boot 项目？&lt;/h1&gt;&lt;p&gt;接下
+      
+    
+    </summary>
+    
+      <category term="后台" scheme="http://eirunye.github.io/categories/%E5%90%8E%E5%8F%B0/"/>
+    
+      <category term="Spring Boot" scheme="http://eirunye.github.io/categories/%E5%90%8E%E5%8F%B0/Spring-Boot/"/>
+    
+    
+      <category term="Java" scheme="http://eirunye.github.io/tags/Java/"/>
+    
+      <category term="Spring Boot" scheme="http://eirunye.github.io/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot 认识(一)</title>
+    <link href="http://eirunye.github.io/2018/08/14/Spring-Boot-knowledge-1/"/>
+    <id>http://eirunye.github.io/2018/08/14/Spring-Boot-knowledge-1/</id>
+    <published>2018-08-14T03:13:46.000Z</published>
+    <updated>2018-08-14T15:23:12.084Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="SpringMVC-、Spring-Boot-、SpringCloud-认识"><a href="#SpringMVC-、Spring-Boot-、SpringCloud-认识" class="headerlink" title="SpringMVC 、Spring Boot 、SpringCloud 认识"></a>SpringMVC 、Spring Boot 、SpringCloud 认识</h1><p>最近开发项目一直用到了Spring Boot脚手架工具，让我们来认识它一下吧，进入Spring Boot开发之旅。</p><p><img src="https://upload-images.jianshu.io/upload_images/3012005-4eea704b10ae0142.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="Spring Boot.jpg"></p><h2 id="认识Spring-Boot"><a href="#认识Spring-Boot" class="headerlink" title="认识Spring Boot"></a>认识Spring Boot</h2><p>   Spring Boot 是由 Pivotal 团队提供的全新框架，其目的是用来简化新 Spring 应用的初始搭建以及开发过程。<br>    Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can “just run”.</p><p>   在开发中给了我们很大的便利，不用进行过多的配置，和繁琐的设置，非常方便我们学习了开发项目。<br>   总结一下几点非常棒:<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">入门简单</span><br><span class="line">开发效率高</span><br><span class="line">无须额外的配置</span><br><span class="line">监控运行过程等</span><br></pre></td></tr></table></figure></p><h2 id="Spring-Boot-和Spring-MVC区别"><a href="#Spring-Boot-和Spring-MVC区别" class="headerlink" title="Spring Boot 和Spring MVC区别"></a>Spring Boot 和Spring MVC区别</h2><p>  <strong>Spring MVC</strong><br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Spring MVC 是Spring的一个模块，是一种解决Web开发应用的框架。这种开发模式层次分明，轻度解耦，为Web应用提供了许多模板，减轻了开发难度，但是Spring都要进行复杂的XML、JavaConfig等资源的配置。</span><br><span class="line">Spring MVC 框架使用IOC对控制逻辑和业务提供了全面的分离，从而很好的解决了复杂错乱的问题。</span><br><span class="line">Spring MVC 需要过分的配置，导致花费更多的时间，效率低下。</span><br></pre></td></tr></table></figure></p><p><strong>Spring Boot</strong><br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Spring Boot 创建完成后，提供了许多复杂的配置，降低了开发的进度和成本。例如: Spring Boot创建完成后，可以集成JDBC、Redis、MySQL、JackJson等等这些配置，让我们在开发过程中收益，只要关注业务，完成相关业务即可，从而不必担心配置的问题。</span><br><span class="line">Spring Boot 可以直接独立运行，简单即可。</span><br><span class="line">Spring Boot 是Spring的一套快速配置脚手架框架，Spring Boot 提供了一系列的相关配置，还有相关了Maven依赖，完全可靠，开发功能和Spring MVC相关功能兼容。</span><br><span class="line">Spring Boot 提供了基于http、ssh、telnet等对运行时的项目进行监控。</span><br><span class="line">Spring Boot 降低学习成本，快速入手开发项目，没有繁琐的配置(这是是广大开发者梦寐以求的)</span><br></pre></td></tr></table></figure></p><h2 id="Spring-Boot-和Spring-Cloud区别"><a href="#Spring-Boot-和Spring-Cloud区别" class="headerlink" title="Spring Boot 和Spring Cloud区别"></a>Spring Boot 和Spring Cloud区别</h2><p><strong>Spring Cloud</strong><br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Spring Cloud 是一种云端分布式架构的解决框架(称为微服务)。</span><br><span class="line">Spring Cloud 是一个基于 Spring Boot 框架实现云微服务应用开发的一套工具.</span><br><span class="line">Spring Cloud 主要是专注于服务之间的通讯、熔断、监控等全局的微服务治理框架。</span><br><span class="line">Spring Cloud 是不能离开Spring Boot这个环境的，Spring Cloud必须依赖于Spring Boot，但是Spring Boot可以离开Spring Cloud独立使用开发项目。</span><br></pre></td></tr></table></figure></p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p> 各位读者如果有更好的见解可以留言，我们一起学习。</p><p> 我们在不断的进步中，将会对<a href="">Spring Boot系列</a>进行深入的探究。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;SpringMVC-、Spring-Boot-、SpringCloud-认识&quot;&gt;&lt;a href=&quot;#SpringMVC-、Spring-Boot-、SpringCloud-认识&quot; class=&quot;headerlink&quot; title=&quot;SpringMVC 、Sprin
+      
+    
+    </summary>
+    
+      <category term="后台" scheme="http://eirunye.github.io/categories/%E5%90%8E%E5%8F%B0/"/>
+    
+      <category term="Spring Boot" scheme="http://eirunye.github.io/categories/%E5%90%8E%E5%8F%B0/Spring-Boot/"/>
+    
+    
+      <category term="Java" scheme="http://eirunye.github.io/tags/Java/"/>
+    
+      <category term="Spring Boot" scheme="http://eirunye.github.io/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://eirunye.github.io/2018/08/09/hello-world/"/>
+    <id>http://eirunye.github.io/2018/08/09/hello-world/</id>
+    <published>2018-08-08T16:13:15.515Z</published>
+    <updated>2018-08-08T16:13:15.519Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
