@@ -135,7 +135,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-9fb441bce0fc8ecf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-eae9ed7abb04ee43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-5551aabdebf638ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600">
-<meta property="og:updated_time" content="2018-08-20T14:09:48.836Z">
+<meta property="og:updated_time" content="2018-08-20T14:22:53.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring-Boot 配置文件设置(三)">
 <meta name="twitter:description" content="简介上篇我们做了一些简单的运行文件的配置，本篇带领大家来认识常用的一些配置，当然了关于Spring Boot 这些配置太多太多了，如果想了解更多的话直接上官网参考一下，了解相关案例如本篇的配置。 application.properties配置官方指南参考。 Spring Boot有以下方式配置application.properties配置在 IntelliJ IDEA 开发工具中创建项目的时候">
@@ -405,7 +405,7 @@
                 
               
 
-              <time title="创建时间：2018-08-20 21:51:39 / 修改时间：22:09:48" itemprop="dateCreated datePublished" datetime="2018-08-20T21:51:39+08:00">2018-08-20</time>
+              <time title="创建时间：2018-08-20 21:51:39 / 修改时间：22:22:53" itemprop="dateCreated datePublished" datetime="2018-08-20T21:51:39+08:00">2018-08-20</time>
             
 
             
@@ -499,7 +499,7 @@
 <blockquote>
 <p>查看常用配置文件<a href="https://github.com/eirunye/SpringBoot_Property/blob/master/src/main/resources/application.properties" target="_blank" rel="noopener">application.properties</a></p>
 </blockquote>
-<h3 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h3><p>   由于有时为了方便项目的开发维护，我们可能需要到自定义配置属性，接下来我们也来搞一下自定义属性配置。</p>
+<h3 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h3><p> 由于有时为了方便项目的开发维护，我们可能需要到自定义配置属性，接下来我们也来搞一下自定义属性配置。</p>
 <blockquote>
 <p>在<strong>application.properties</strong>自定义配置属性:</p>
 </blockquote>
@@ -530,7 +530,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@RestController</span><br><span class="line">public class DefBeanPropertyController &#123;</span><br><span class="line">   //通过 Autowired注解来获取到 Properties属性，注:Autowired是按类型进行装配，可获取它所装配类的属性</span><br><span class="line">    @Autowired</span><br><span class="line">    Properties properties;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(value = &quot;/bean/defproperty&quot;)</span><br><span class="line">    public String getDefBeanProperties() &#123;</span><br><span class="line">        return &quot;这是通过Bean注解的方式获取属性: &quot; + properties.getDefproname() + &quot;,密码为: &quot; + properties.getDefpropass();</span><br><span class="line">    &#125;&#125;</span><br></pre></td></tr></table></figure>
 <p>3.在项目的入口文件<strong>Application</strong>添加注解<strong>@EnableConfigurationProperties</strong><br>最后加上包名不然可能找不到扫描文件如:<code>@EnableConfigurationProperties({com.eirunye.defpropertys.bean.Properties.class})</code>。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@SpringBootApplication</span><br><span class="line">@EnableConfigurationProperties(&#123;com.eirunye.defpropertys.bean.Properties.class&#125;)//添加注解bean的扫描文件</span><br><span class="line">public class DefpropertysApplication &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		SpringApplication.run(DefpropertysApplication.class, args);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>4.测试<br>IntelliJ IDEA访问<br><img src="https://upload-images.jianshu.io/upload_images/3012005-e83c94a826f2309d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="bean_def_idea.png"></p>
+<p>4.测试<br>IntelliJ IDEA访问</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/3012005-e83c94a826f2309d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="bean_def_idea.png"></p>
 <blockquote>
 <p>创建文件xxx.properties文件方式</p>
 </blockquote>
@@ -543,7 +544,8 @@
 <p>3.在<code>DefinePropertiesController.class</code>引用</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@RestController</span><br><span class="line">public class DefinePropertiesController &#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    DefineProperties defineProperties;</span><br><span class="line">    @RequestMapping(value = &quot;define/Properties&quot;)</span><br><span class="line">    public String getDefinePropertiesData()&#123;</span><br><span class="line">        return &quot;新建文件自定义属性姓名：&quot;+defineProperties.getDefineuser()+&quot;,新建文件自定义属性年龄：&quot;+defineProperties.getDefineage();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>4.别忘了在Application里面添加配置<code>@EnableConfigurationProperties</code>,即：<code>@EnableConfigurationProperties({com.eirunye.defpropertys.bean.Properties.class,com.eirunye.defpropertys.bean.DefineProperties.class})</code></p>
-<p>5.测试<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8084/define/Properties</span><br></pre></td></tr></table></figure></p>
+<p>5.测试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8084/define/Properties</span><br></pre></td></tr></table></figure>
 <p><img src="https://upload-images.jianshu.io/upload_images/3012005-9fb441bce0fc8ecf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="def_idea_show.png"></p>
 <blockquote>
 <p><strong>下载application.properties<a href="https://github.com/eirunye/SpringBoot_defpropertys" target="_blank" rel="noopener">案例demo</a></strong></p>
@@ -566,7 +568,8 @@
 <p>1.和上面的application.properties类似，但是需要注意的是<em>格式问题</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">com:</span><br><span class="line">  eirunye:</span><br><span class="line">    ymlname: ymlroot</span><br><span class="line">    ymlpass: yml123456</span><br></pre></td></tr></table></figure></p>
 <p>2.通过<code>@Value(&quot;${com.eirunye.ymlname}&quot;)</code>获取</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@RestController</span><br><span class="line">public class YmlPropertiesController&#123;</span><br><span class="line">    @Value(&quot;$&#123;com.eirunye.ymlname&#125;&quot;)</span><br><span class="line">    private String ymlname;</span><br><span class="line"></span><br><span class="line">    @Value(&quot;$&#123;com.eirunye.ymlpass&#125;&quot;)</span><br><span class="line">    private String ymlpass;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(value = &quot;yml/proprety&quot;)</span><br><span class="line">    public String getYmlPropreties() &#123;</span><br><span class="line">        return &quot;这个自定义属性名为: &quot; + ymlname+ &quot;, 密码为:&quot; + ymlpass;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>3.测试—访问:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8084/yml/proprety</span><br></pre></td></tr></table></figure></p>
+<p>3.测试—访问:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8084/yml/proprety</span><br></pre></td></tr></table></figure>
 <p><img src="https://upload-images.jianshu.io/upload_images/3012005-eae9ed7abb04ee43.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="yml_def.png"></p>
 <blockquote>
 <p>通过Bean方式获取和application.properties方式一样</p>
@@ -575,10 +578,11 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@ConfigurationProperties(prefix = &quot;com.eirunye&quot;)//添加该注解</span><br><span class="line">public class YmlPropertyBean &#123;</span><br><span class="line"></span><br><span class="line">    private String ymlname;</span><br><span class="line">    private String ymlpass;</span><br><span class="line">// get/set方法.....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>2.在 <code>YmlPropertyBeanController.class</code>引用</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@RestController</span><br><span class="line">public class YmlPropertyBeanController &#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    YmlPropertyBean propertyBean;</span><br><span class="line">    @RequestMapping(value = &quot;/bean/ymlproperty&quot;)</span><br><span class="line">    public String getYmlPropertyData()&#123;</span><br><span class="line">        return &quot;这个bean自定义属性名为: &quot; + propertyBean.getYmlname()+ &quot;, 密码为:&quot; + propertyBean.getYmlpass();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>3.测试-访问<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8084/bean/ymlproperty</span><br></pre></td></tr></table></figure></p>
+<p>3.测试-访问</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8084/bean/ymlproperty</span><br></pre></td></tr></table></figure>
 <p><img src="https://upload-images.jianshu.io/upload_images/3012005-5551aabdebf638ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="yml_bean_def.png"></p>
 <blockquote>
-<p>下载.yml<a href="https://github.com/eirunye/SpringBoot_defineyml" target="_blank" rel="noopener">案例demo</a></p>
+<p><strong>下载.yml<a href="https://github.com/eirunye/SpringBoot_defineyml" target="_blank" rel="noopener">案例demo</a></strong></p>
 </blockquote>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>   1.本篇主要讲得配置文件，到此就结束了，在开发中这是我们经常用到。<br>   2.在本篇有些相关配置，本例的代码实例还没涉及到，接下来会继续结合相关的配置案例继续更新。<br>   3.相信大家也有所掌握。</p>
 
