@@ -119,17 +119,24 @@
 
 
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="简介Spring Boot项目的搭建，常用实例分析在项目开发中我们一般情况下提供给APP或者网站应用的接口一般的请求方式是GET、POST、PUT等等，那么接下来我们将通过一个简单的案例来进行分析，带领大家进入Spring Boot项目的开发，创建(层级分明，思路请析)、编码，主要是 搭建项目 等。  项目结构创建项目目录如下,包层级分明一般如下图所示:  在src目录下的main/java里面的">
+<meta name="keywords" content="Java,Spring Boot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://eirunye.github.io/2018/08/09/hello-world/index.html">
+<meta property="og:title" content="Spring Boot 项目如何搭建(四)">
+<meta property="og:url" content="http://eirunye.github.io/2018/08/22/Spring-Boot-项目如何搭建-四/index.html">
 <meta property="og:site_name" content="Eirunye Activity">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="简介Spring Boot项目的搭建，常用实例分析在项目开发中我们一般情况下提供给APP或者网站应用的接口一般的请求方式是GET、POST、PUT等等，那么接下来我们将通过一个简单的案例来进行分析，带领大家进入Spring Boot项目的开发，创建(层级分明，思路请析)、编码，主要是 搭建项目 等。  项目结构创建项目目录如下,包层级分明一般如下图所示:  在src目录下的main/java里面的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-08T16:13:15.519Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-9ef32ee8190ef780.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/300">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-e971c11aed6ab6dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-187753fe7538a27d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-58c7ec1b75c3069b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-db619b9a5da650ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600">
+<meta property="og:updated_time" content="2018-08-24T09:23:18.843Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Spring Boot 项目如何搭建(四)">
+<meta name="twitter:description" content="简介Spring Boot项目的搭建，常用实例分析在项目开发中我们一般情况下提供给APP或者网站应用的接口一般的请求方式是GET、POST、PUT等等，那么接下来我们将通过一个简单的案例来进行分析，带领大家进入Spring Boot项目的开发，创建(层级分明，思路请析)、编码，主要是 搭建项目 等。  项目结构创建项目目录如下,包层级分明一般如下图所示:  在src目录下的main/java里面的">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/3012005-9ef32ee8190ef780.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/300">
 
 
 
@@ -138,7 +145,7 @@
 
 
 
-  <link rel="canonical" href="http://eirunye.github.io/2018/08/09/hello-world/"/>
+  <link rel="canonical" href="http://eirunye.github.io/2018/08/22/Spring-Boot-项目如何搭建-四/"/>
 
 
 
@@ -148,7 +155,7 @@
   };
 </script>
 
-  <title>Hello World | Eirunye Activity</title>
+  <title>Spring Boot 项目如何搭建(四) | Eirunye Activity</title>
   
 
 
@@ -353,7 +360,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://eirunye.github.io/2018/08/09/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://eirunye.github.io/2018/08/22/Spring-Boot-项目如何搭建-四/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Eirunye">
@@ -370,7 +377,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World
+          <h1 class="post-title" itemprop="name headline">Spring Boot 项目如何搭建(四)
               
             
           </h1>
@@ -395,12 +402,53 @@
                 
               
 
-              <time title="创建时间：2018-08-09 00:13:15" itemprop="dateCreated datePublished" datetime="2018-08-09T00:13:15+08:00">2018-08-09</time>
+              <time title="创建时间：2018-08-22 22:13:20" itemprop="dateCreated datePublished" datetime="2018-08-22T22:13:20+08:00">2018-08-22</time>
             
 
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-08-24 17:23:18" itemprop="dateModified" datetime="2018-08-24T17:23:18+08:00">2018-08-24</time>
+              
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/后台/" itemprop="url" rel="index"><span itemprop="name">后台</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/后台/Spring-Boot/" itemprop="url" rel="index"><span itemprop="name">Spring Boot</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -410,8 +458,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/09/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/09/hello-world/" itemprop="commentCount"></span>
+                <a href="/2018/08/22/Spring-Boot-项目如何搭建-四/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/22/Spring-Boot-项目如何搭建-四/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -419,7 +467,7 @@
 
           
           
-             <span id="/2018/08/09/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+             <span id="/2018/08/22/Spring-Boot-项目如何搭建-四/" class="leancloud_visitors" data-flag-title="Spring Boot 项目如何搭建(四)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -450,16 +498,32 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="Spring-Boot项目的搭建，常用实例分析"><a href="#Spring-Boot项目的搭建，常用实例分析" class="headerlink" title="Spring Boot项目的搭建，常用实例分析"></a>Spring Boot项目的搭建，常用实例分析</h2><p>在项目开发中我们一般情况下提供给APP或者网站应用的接口一般的请求方式是<strong><em>GET、POST、PUT</em></strong>等等，那么接下来我们将通过一个简单的案例来进行分析，带领大家进入Spring Boot项目的开发，创建(层级分明，思路请析)、编码，主要是 <strong><em>搭建项目</em></strong> 等。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/3012005-9ef32ee8190ef780.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="Spring Boot.jpg"></p>
+<h1 id="项目结构创建"><a href="#项目结构创建" class="headerlink" title="项目结构创建"></a>项目结构创建</h1><h2 id="项目目录如下-包层级分明"><a href="#项目目录如下-包层级分明" class="headerlink" title="项目目录如下,包层级分明"></a>项目目录如下,包层级分明</h2><p>一般如下图所示:</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/3012005-e971c11aed6ab6dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500" alt="项目包级结构.png"></p>
+<p>在<strong><em>src</em></strong>目录下的<strong><em>main/java</em></strong>里面的创建的包级目录,进行分析如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/============================</span><br><span class="line">|-- controller：主要是控制器，通过注解@RestController，Spring4之后新加的注解，原来返回json数据格式，通@RequestMapping，设置访问URI。</span><br><span class="line">|-- enums: 主要是封装返回码的提示。</span><br><span class="line">|-- exception: 主要是封装异常打印输出。</span><br><span class="line">|-- handle: 捕捉异常处理</span><br><span class="line">|-- model：实体类</span><br><span class="line">|-- repository：Jpa使用封装</span><br><span class="line">|-- service：逻辑处理封装，返回数据给Controller类</span><br><span class="line">|-- utils：封装一些工具类</span><br><span class="line">|-- 其他：在开发中还有一些需要创建其他包，根据自己需求。</span><br><span class="line">\============================</span><br></pre></td></tr></table></figure></p>
+<h2 id="主要代码分析"><a href="#主要代码分析" class="headerlink" title="主要代码分析"></a>主要代码分析</h2><p>这里主要是写一个简单的事例进行参考包层级之间的调用。</p>
+<p>代码注解如下:</p>
+<p> <strong><em>EirunyeController.class</em></strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">@RestController</span><br><span class="line">@RequestMapping(&quot;/Eirunye&quot;) //设置请求的父级标签URI</span><br><span class="line">public class EirunyeController &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired //注:Autowired是按类型进行装配，可获取它所装配类的属性</span><br><span class="line">    EirunyeService eirunyeService;</span><br><span class="line">    /**</span><br><span class="line">     * 访问返回数据</span><br><span class="line">     * @return Result&lt;EiBean&gt;</span><br><span class="line">     * @throws Exception 出现异常处理</span><br><span class="line">     */</span><br><span class="line">    @GetMapping(value = &quot;/bean&quot;)</span><br><span class="line">    public Result&lt;EiBean&gt; getEiBeanData() throws Exception &#123;</span><br><span class="line"></span><br><span class="line">        return eirunyeService.getEiBeanData();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p> <strong><em>EirunyeService.class</em></strong><br>@Service 用于标注业务层组件：将当前类注册为Spring的Bean</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@Service // 用于标注业务层组件：将当前类注册为Spring的Bean</span><br><span class="line">public class EirunyeService &#123;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * @return Result&lt;EiBean&gt;</span><br><span class="line">     * @throws EirunyeException 异常处理</span><br><span class="line">     */</span><br><span class="line">    public Result&lt;EiBean&gt; getEiBeanData() throws EirunyeException&#123;</span><br><span class="line">        EiBean eiBean = new EiBean();</span><br><span class="line">        eiBean.setName(&quot;Eirunye&quot;);</span><br><span class="line">        eiBean.setAge(19);</span><br><span class="line">        eiBean.setHobby(&quot;Java Spring Boot&quot;);</span><br><span class="line">        return ResultUtil.globalInfo(ResultEnum.SUCCESS,eiBean);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><em>EiBean.class</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class EiBean &#123;</span><br><span class="line"></span><br><span class="line">    private String name;</span><br><span class="line"></span><br><span class="line">    private int age;</span><br><span class="line"></span><br><span class="line">    private String hobby;</span><br><span class="line">//get/set...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p><strong><em>在接下来会有一篇博文会详细讲解在开发中我们如何进行测试(#)，这里只进行一些简单测试</em></strong></p>
+<p>在这里我们只需要进行一下访问结果，如下:</p>
+<p>Postman请求如下:</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/3012005-187753fe7538a27d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="Postman_返回.png"></p>
+<p>IDEA请求如下:</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/3012005-58c7ec1b75c3069b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="返回成功.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/3012005-db619b9a5da650ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="返回数据结果.png"></p>
+<blockquote>
+<p><strong>下载本例搭建<a href="https://github.com/eirunye/SpringBoot_CreateProject" target="_blank" rel="noopener">项目demo</a></strong></p>
+</blockquote>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>  1.学习本篇，我们知道如何搭建一个好的项目工程,常用的功能架构</p>
+<p>  2.这是创建Spring Boot 项目所需要分层的，希望对大家有所帮助</p>
+<p>  3.大家有什么疑问可以留言哦！！！</p>
+
       
     </div>
 
@@ -477,6 +541,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/Spring-Boot/" rel="tag"><i class="fa fa-tag"></i> Spring Boot</a>
+          
+        </div>
+      
 
       
       
@@ -486,15 +558,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/08/20/Spring-Boot-配置文件设置-三/" rel="next" title="Spring Boot 配置文件设置(三)">
+                <i class="fa fa-chevron-left"></i> Spring Boot 配置文件设置(三)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/14/Spring-Boot-knowledge-1/" rel="prev" title="Spring Boot 认识(一)">
-                Spring Boot 认识(一) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -682,7 +754,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试"><span class="nav-number"></span> <span class="nav-text">测试</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot项目的搭建，常用实例分析"><span class="nav-number">1.1.</span> <span class="nav-text">Spring Boot项目的搭建，常用实例分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目结构创建"><span class="nav-number">2.</span> <span class="nav-text">项目结构创建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目目录如下-包层级分明"><span class="nav-number">2.1.</span> <span class="nav-text">项目目录如下,包层级分明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要代码分析"><span class="nav-number">2.2.</span> <span class="nav-text">主要代码分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试"><span class="nav-number">3.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
