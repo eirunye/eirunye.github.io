@@ -119,20 +119,18 @@
 
 
 
-  <meta name="description" content="SpringMVC 、Spring Boot 、SpringCloud 认识最近开发项目一直用到了Spring Boot脚手架工具，让我们来认识它一下吧，进入Spring Boot开发之旅。  认识Spring Boot   Spring Boot 是由 Pivotal 团队提供的全新框架，其目的是用来简化新 Spring 应用的初始搭建以及开发过程。    Spring Boot makes i">
-<meta name="keywords" content="Java,Spring Boot">
+  <meta name="description" content="简介1.学习本篇博文，我们知道在什么场景下使用观察者模式。2.观察者模式的优缺点。3.观察者模式给我们在今后开发中什么思想。 场景问题什么是观察者模式？观察者模式定义一系列对象之间的一对多关系，当一个对象改变、更新状态时，依赖它的都会收到通知改变或者更新。 为什么需要观察者模式如何实现观察者模式？自定义观察者模式实现如下1.构造一个主题Subject或者是一个被观察者Observeable，这是一">
+<meta name="keywords" content="Java,设计模式,观察者模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring Boot 认识(一)">
-<meta property="og:url" content="http://eirunye.github.io/2018/08/14/Spring-Boot-knowledge-1/index.html">
+<meta property="og:title" content="观察者模式">
+<meta property="og:url" content="http://eirunye.github.io/2018/09/01/观察者模式/index.html">
 <meta property="og:site_name" content="Eirunye Activity">
-<meta property="og:description" content="SpringMVC 、Spring Boot 、SpringCloud 认识最近开发项目一直用到了Spring Boot脚手架工具，让我们来认识它一下吧，进入Spring Boot开发之旅。  认识Spring Boot   Spring Boot 是由 Pivotal 团队提供的全新框架，其目的是用来简化新 Spring 应用的初始搭建以及开发过程。    Spring Boot makes i">
+<meta property="og:description" content="简介1.学习本篇博文，我们知道在什么场景下使用观察者模式。2.观察者模式的优缺点。3.观察者模式给我们在今后开发中什么思想。 场景问题什么是观察者模式？观察者模式定义一系列对象之间的一对多关系，当一个对象改变、更新状态时，依赖它的都会收到通知改变或者更新。 为什么需要观察者模式如何实现观察者模式？自定义观察者模式实现如下1.构造一个主题Subject或者是一个被观察者Observeable，这是一">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-4eea704b10ae0142.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/300">
-<meta property="og:updated_time" content="2018-08-14T15:23:12.084Z">
+<meta property="og:updated_time" content="2018-08-31T17:52:39.647Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring Boot 认识(一)">
-<meta name="twitter:description" content="SpringMVC 、Spring Boot 、SpringCloud 认识最近开发项目一直用到了Spring Boot脚手架工具，让我们来认识它一下吧，进入Spring Boot开发之旅。  认识Spring Boot   Spring Boot 是由 Pivotal 团队提供的全新框架，其目的是用来简化新 Spring 应用的初始搭建以及开发过程。    Spring Boot makes i">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/3012005-4eea704b10ae0142.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/300">
+<meta name="twitter:title" content="观察者模式">
+<meta name="twitter:description" content="简介1.学习本篇博文，我们知道在什么场景下使用观察者模式。2.观察者模式的优缺点。3.观察者模式给我们在今后开发中什么思想。 场景问题什么是观察者模式？观察者模式定义一系列对象之间的一对多关系，当一个对象改变、更新状态时，依赖它的都会收到通知改变或者更新。 为什么需要观察者模式如何实现观察者模式？自定义观察者模式实现如下1.构造一个主题Subject或者是一个被观察者Observeable，这是一">
 
 
 
@@ -141,7 +139,7 @@
 
 
 
-  <link rel="canonical" href="http://eirunye.github.io/2018/08/14/Spring-Boot-knowledge-1/"/>
+  <link rel="canonical" href="http://eirunye.github.io/2018/09/01/观察者模式/"/>
 
 
 
@@ -151,7 +149,7 @@
   };
 </script>
 
-  <title>Spring Boot 认识(一) | Eirunye Activity</title>
+  <title>观察者模式 | Eirunye Activity</title>
   
 
 
@@ -356,7 +354,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://eirunye.github.io/2018/08/14/Spring-Boot-knowledge-1/">
+    <link itemprop="mainEntityOfPage" href="http://eirunye.github.io/2018/09/01/观察者模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Eirunye">
@@ -373,7 +371,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Spring Boot 认识(一)
+          <h1 class="post-title" itemprop="name headline">观察者模式
               
             
           </h1>
@@ -398,7 +396,7 @@
                 
               
 
-              <time title="创建时间：2018-08-14 11:13:46 / 修改时间：23:23:12" itemprop="dateCreated datePublished" datetime="2018-08-14T11:13:46+08:00">2018-08-14</time>
+              <time title="创建时间：2018-09-01 01:24:02 / 修改时间：01:52:39" itemprop="dateCreated datePublished" datetime="2018-09-01T01:24:02+08:00">2018-09-01</time>
             
 
             
@@ -420,14 +418,14 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/后台/" itemprop="url" rel="index"><span itemprop="name">后台</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/设计模式/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/后台/Spring-Boot/" itemprop="url" rel="index"><span itemprop="name">Spring Boot</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/设计模式/观察者模式/" itemprop="url" rel="index"><span itemprop="name">观察者模式</span></a></span>
 
                 
                 
@@ -442,8 +440,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/14/Spring-Boot-knowledge-1/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/14/Spring-Boot-knowledge-1/" itemprop="commentCount"></span>
+                <a href="/2018/09/01/观察者模式/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/09/01/观察者模式/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -451,7 +449,7 @@
 
           
           
-             <span id="/2018/08/14/Spring-Boot-knowledge-1/" class="leancloud_visitors" data-flag-title="Spring Boot 认识(一)">
+             <span id="/2018/09/01/观察者模式/" class="leancloud_visitors" data-flag-title="观察者模式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -482,15 +480,27 @@
       
 
       
-        <h1 id="SpringMVC-、Spring-Boot-、SpringCloud-认识"><a href="#SpringMVC-、Spring-Boot-、SpringCloud-认识" class="headerlink" title="SpringMVC 、Spring Boot 、SpringCloud 认识"></a>SpringMVC 、Spring Boot 、SpringCloud 认识</h1><p>最近开发项目一直用到了Spring Boot脚手架工具，让我们来认识它一下吧，进入Spring Boot开发之旅。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/3012005-4eea704b10ae0142.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="Spring Boot.jpg"></p>
-<h2 id="认识Spring-Boot"><a href="#认识Spring-Boot" class="headerlink" title="认识Spring Boot"></a>认识Spring Boot</h2><p>   Spring Boot 是由 Pivotal 团队提供的全新框架，其目的是用来简化新 Spring 应用的初始搭建以及开发过程。<br>    Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can “just run”.</p>
-<p>   在开发中给了我们很大的便利，不用进行过多的配置，和繁琐的设置，非常方便我们学习了开发项目。<br>   总结一下几点非常棒:<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">入门简单</span><br><span class="line">开发效率高</span><br><span class="line">无须额外的配置</span><br><span class="line">监控运行过程等</span><br></pre></td></tr></table></figure></p>
-<h2 id="Spring-Boot-和Spring-MVC区别"><a href="#Spring-Boot-和Spring-MVC区别" class="headerlink" title="Spring Boot 和Spring MVC区别"></a>Spring Boot 和Spring MVC区别</h2><p>  <strong>Spring MVC</strong><br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Spring MVC 是Spring的一个模块，是一种解决Web开发应用的框架。这种开发模式层次分明，轻度解耦，为Web应用提供了许多模板，减轻了开发难度，但是Spring都要进行复杂的XML、JavaConfig等资源的配置。</span><br><span class="line">Spring MVC 框架使用IOC对控制逻辑和业务提供了全面的分离，从而很好的解决了复杂错乱的问题。</span><br><span class="line">Spring MVC 需要过分的配置，导致花费更多的时间，效率低下。</span><br></pre></td></tr></table></figure></p>
-<p><strong>Spring Boot</strong><br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Spring Boot 创建完成后，提供了许多复杂的配置，降低了开发的进度和成本。例如: Spring Boot创建完成后，可以集成JDBC、Redis、MySQL、JackJson等等这些配置，让我们在开发过程中收益，只要关注业务，完成相关业务即可，从而不必担心配置的问题。</span><br><span class="line">Spring Boot 可以直接独立运行，简单即可。</span><br><span class="line">Spring Boot 是Spring的一套快速配置脚手架框架，Spring Boot 提供了一系列的相关配置，还有相关了Maven依赖，完全可靠，开发功能和Spring MVC相关功能兼容。</span><br><span class="line">Spring Boot 提供了基于http、ssh、telnet等对运行时的项目进行监控。</span><br><span class="line">Spring Boot 降低学习成本，快速入手开发项目，没有繁琐的配置(这是是广大开发者梦寐以求的)</span><br></pre></td></tr></table></figure></p>
-<h2 id="Spring-Boot-和Spring-Cloud区别"><a href="#Spring-Boot-和Spring-Cloud区别" class="headerlink" title="Spring Boot 和Spring Cloud区别"></a>Spring Boot 和Spring Cloud区别</h2><p><strong>Spring Cloud</strong><br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Spring Cloud 是一种云端分布式架构的解决框架(称为微服务)。</span><br><span class="line">Spring Cloud 是一个基于 Spring Boot 框架实现云微服务应用开发的一套工具.</span><br><span class="line">Spring Cloud 主要是专注于服务之间的通讯、熔断、监控等全局的微服务治理框架。</span><br><span class="line">Spring Cloud 是不能离开Spring Boot这个环境的，Spring Cloud必须依赖于Spring Boot，但是Spring Boot可以离开Spring Cloud独立使用开发项目。</span><br></pre></td></tr></table></figure></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p> 各位读者如果有更好的见解可以留言，我们一起学习。</p>
-<p> 我们在不断的进步中，将会对<a href="">Spring Boot系列</a>进行深入的探究。</p>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>1.学习本篇博文，我们知道在什么场景下使用观察者模式。<br>2.观察者模式的优缺点。<br>3.观察者模式给我们在今后开发中什么思想。</p>
+<h1 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h1><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><h2 id="什么是观察者模式？"><a href="#什么是观察者模式？" class="headerlink" title="什么是观察者模式？"></a>什么是观察者模式？</h2><p>观察者模式定义一系列对象之间的一对多关系，当一个对象改变、更新状态时，依赖它的都会收到通知改变或者更新。</p>
+<h2 id="为什么需要观察者模式"><a href="#为什么需要观察者模式" class="headerlink" title="为什么需要观察者模式"></a>为什么需要观察者模式</h2><h1 id="如何实现观察者模式？"><a href="#如何实现观察者模式？" class="headerlink" title="如何实现观察者模式？"></a>如何实现观察者模式？</h1><h2 id="自定义观察者模式"><a href="#自定义观察者模式" class="headerlink" title="自定义观察者模式"></a>自定义观察者模式</h2><h3 id="实现如下"><a href="#实现如下" class="headerlink" title="实现如下"></a>实现如下</h3><p>1.构造一个主题Subject或者是一个被观察者Observeable，这是一个接口或者是抽象类<br> 接口方法有:<br> registerObserver(Observer o);//注册观察者</p>
+<p> unRegisterObserve(Observer o);//解注册观察者</p>
+<p> notifyObservers();更新数据<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> public interface Subject &#123;</span><br><span class="line"></span><br><span class="line">  void registerObserver(Observer observe);</span><br><span class="line">  void unRegisterObserver(Observer observe);</span><br><span class="line">  void notifyObservers();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p> 2.构建一个被观察者实现改主题接口如本例的 DevelopmentProgressData.class<br>  在registerObserver(Observer o)方法中将观察者添加到注册列表中<br>  在 unRegisterObserve(Observer o)删除观察者<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public class DevelopmentProgressData implements Subject &#123;</span><br><span class="line"> @Override</span><br><span class="line">   public void registerObserver(Observer observer) &#123;</span><br><span class="line">       arrayObserve.add(observer);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   @Override</span><br><span class="line">   public void unRegisterObserver(Observer observer) &#123;</span><br><span class="line">       int i = arrayObserve.indexOf(observer);</span><br><span class="line">       if (i &gt;= 0) &#123;</span><br><span class="line">           arrayObserve.remove(i);</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   @Override</span><br><span class="line">   public void notifyObservers() &#123;</span><br><span class="line"></span><br><span class="line">       for (int i = 0; i &lt; arrayObserve.size(); i++) &#123;</span><br><span class="line">           Observer o = (Observer) arrayObserve.get(i);</span><br><span class="line">           o.update(completeProgress, updateProgress);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>3.构建一个观察者接口Observer<br> 方法：<br> update(); //更新数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface Observer &#123;</span><br><span class="line"></span><br><span class="line">   void update(int completeProgress, int updateProgress);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>4.可构建一个展示数据的接口（可忽略）<br> 有展示数据的方法，观察者要实现这个方法 查看本例的 DisplaySchedule<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public interface DisplaySchedule &#123;</span><br><span class="line">    void display();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>5.定义观察者，需实现Observes，DisplaySchedule(可忽略)接口，</p>
+<p><1>、将主题Subject设置为观察者的属性，并将其作为观察者的构造函数如 ProductManagerObserver.class<br>调用  developmentProgressSubject.registerObserver(this);将观察者注册到观察列表中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public class ProductManagerObserver implements Observer, DisplaySchedule &#123;</span><br><span class="line"></span><br><span class="line">    private int completeProgress;//完成进度</span><br><span class="line">    private int updateProgress;//更新进度</span><br><span class="line"></span><br><span class="line">    private Subject developmentProgressSubject;</span><br><span class="line"></span><br><span class="line">    public ProductManagerObserver(Subject developmentProgressSubject) &#123;</span><br><span class="line">        this.developmentProgressSubject = developmentProgressSubject;</span><br><span class="line">        developmentProgressSubject.registerObserver(this);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void display() &#123;</span><br><span class="line">        System.out.println(&quot;产品经理管理者显示当前数据 完成进度为: &quot; + completeProgress + &quot;更新修改进度为:&quot; + updateProgress);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void update(int completeProgress, int updateProgress) &#123;</span><br><span class="line">        this.completeProgress = completeProgress;</span><br><span class="line">        this.updateProgress = updateProgress;</span><br><span class="line">        display();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></1></p>
+<p>6.测试 RunTest.class<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class RunTest &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        DevelopmentProgressData developmentProgressData = new DevelopmentProgressData();</span><br><span class="line">        ProductManagerObserver productManagerObserver = new ProductManagerObserver(developmentProgressData);</span><br><span class="line">        ProjectManagerObserver projectManagerObserver = new ProjectManagerObserver(developmentProgressData);</span><br><span class="line">        developmentProgressData.setCurrentData(34, 45);</span><br><span class="line">        //当项目经理出差了，不观察项目进度了就取消订阅了</span><br><span class="line">        developmentProgressData.unRegisterObserver(projectManagerObserver);</span><br><span class="line">        //当前只有产品经理获取到数据</span><br><span class="line">        developmentProgressData.setCurrentData(46, 90);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="根据java-util-observerable包下的Observerable-class实现观察者模式功能"><a href="#根据java-util-observerable包下的Observerable-class实现观察者模式功能" class="headerlink" title="根据java.util.observerable包下的Observerable.class实现观察者模式功能"></a>根据java.util.observerable包下的Observerable.class实现观察者模式功能</h2><h3 id="实现如下-1"><a href="#实现如下-1" class="headerlink" title="实现如下"></a>实现如下</h3><p> 1.首先观察者需要实现java.util.Observer,然后将其被观察者=&gt;java.util.Observaerable作为其观察者的构造函数</p>
+<p>   <1>、通过observeable.addObserver(this)添加观察者<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"> public class BossMngObserver implements Observer, DisplayIllustrate &#123;</span><br><span class="line"></span><br><span class="line">  private Observable observable;</span><br><span class="line">  private int valuableProductNum; //库存有贵重产品</span><br><span class="line">  private int normalProductNum;   //普通产品</span><br><span class="line"></span><br><span class="line">  public BossMngObserver(Observable observable) &#123;</span><br><span class="line">      this.observable = observable;</span><br><span class="line">      observable.addObserver(this);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @Override</span><br><span class="line">  public void disPlay() &#123;</span><br><span class="line">      System.out.println(&quot;总经理观察数据改变:贵重产品数量: &quot; + valuableProductNum + &quot;普通产品数量： &quot; + normalProductNum);</span><br><span class="line">  &#125;</span><br><span class="line"> //&lt;2&gt;、实现 Observer更新数据方法</span><br><span class="line"> //看本例的包下的observe的三个类</span><br><span class="line">  @Override</span><br><span class="line">  public void update(Observable o, Object arg) &#123;</span><br><span class="line">      if (o instanceof InventoryData) &#123;</span><br><span class="line">          InventoryData inventoryData = (InventoryData) o;</span><br><span class="line">          this.valuableProductNum = inventoryData.getValuableProductNum();</span><br><span class="line">          this.normalProductNum = inventoryData.getNormalProductNum();</span><br><span class="line">          disPlay();</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></1></p>
+<p> 2.被观察者需要继承java.util.Observerable,</p>
+<p>   <1>、然后先调用setChanged()方法</1></p>
+<p>   <2>、在进行调用notifyObserves()更新数据</2></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> public class InventoryData extends Observable &#123;</span><br><span class="line"></span><br><span class="line">   private int valuableProductNum; //库存有贵重产品</span><br><span class="line">   private int normalProductNum;   //普通产品</span><br><span class="line"></span><br><span class="line">   public void setCurrentData(int valuableProductNum, int normalProductNum) &#123;</span><br><span class="line">       this.valuableProductNum = valuableProductNum;</span><br><span class="line">       this.normalProductNum = normalProductNum;</span><br><span class="line">       statusChange();</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   private void statusChange() &#123;</span><br><span class="line">   //先调用 setChanged();</span><br><span class="line">       setChanged();</span><br><span class="line">       notifyObservers();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  3.测试 Test.class<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        InventoryData inventoryData = new InventoryData();</span><br><span class="line"></span><br><span class="line">        ValuableInfoMngObserver io = new ValuableInfoMngObserver(inventoryData);</span><br><span class="line"></span><br><span class="line">        //io.deleteObserve();</span><br><span class="line">        inventoryData.setCurrentData(20, 30);</span><br><span class="line"></span><br><span class="line">        NormalInfoMngObserver no = new NormalInfoMngObserver(inventoryData);</span><br><span class="line"></span><br><span class="line">        //no.deleteObserver();</span><br><span class="line">        inventoryData.setCurrentData(15, 27);</span><br><span class="line"></span><br><span class="line">        BossMngObserver bossMngObserver = new BossMngObserver(inventoryData);</span><br><span class="line"></span><br><span class="line">        inventoryData.setCurrentData(10, 50);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>观察者模式的让我们知道了在设计开发的时候一定要“多用组合，少用继承”。</p>
+<p>我们设计开发是应该是针对接口变成，而不针对实现编程。</p>
+<p>在java.util.*下的Observer和Observable可以实现观察者，但是Observable是一个类，这样我们是不违背了“多用组合少用继承”的OO编程思想，是的没错在java.util.Observable类违背了该规则。</p>
 
       
     </div>
@@ -513,7 +523,9 @@
           
             <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
-            <a href="/tags/Spring-Boot/" rel="tag"><i class="fa fa-tag"></i> Spring Boot</a>
+            <a href="/tags/设计模式/" rel="tag"><i class="fa fa-tag"></i> 设计模式</a>
+          
+            <a href="/tags/观察者模式/" rel="tag"><i class="fa fa-tag"></i> 观察者模式</a>
           
         </div>
       
@@ -526,14 +538,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/08/22/Spring-Boot-项目如何搭建-四/" rel="next" title="Spring Boot 项目如何搭建(四)">
+                <i class="fa fa-chevron-left"></i> Spring Boot 项目如何搭建(四)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/14/Spring-Boot-项目创建-二/" rel="prev" title="Spring Boot 项目创建(二)">
-                Spring Boot 项目创建(二) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/01/策略模式/" rel="prev" title="策略模式">
+                策略模式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -734,7 +750,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SpringMVC-、Spring-Boot-、SpringCloud-认识"><span class="nav-number">1.</span> <span class="nav-text">SpringMVC 、Spring Boot 、SpringCloud 认识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#认识Spring-Boot"><span class="nav-number">1.1.</span> <span class="nav-text">认识Spring Boot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot-和Spring-MVC区别"><span class="nav-number">1.2.</span> <span class="nav-text">Spring Boot 和Spring MVC区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot-和Spring-Cloud区别"><span class="nav-number">1.3.</span> <span class="nav-text">Spring Boot 和Spring Cloud区别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#场景"><span class="nav-number">2.</span> <span class="nav-text">场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">3.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是观察者模式？"><span class="nav-number">3.1.</span> <span class="nav-text">什么是观察者模式？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么需要观察者模式"><span class="nav-number">3.2.</span> <span class="nav-text">为什么需要观察者模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何实现观察者模式？"><span class="nav-number">4.</span> <span class="nav-text">如何实现观察者模式？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义观察者模式"><span class="nav-number">4.1.</span> <span class="nav-text">自定义观察者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实现如下"><span class="nav-number">4.1.1.</span> <span class="nav-text">实现如下</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#根据java-util-observerable包下的Observerable-class实现观察者模式功能"><span class="nav-number">4.2.</span> <span class="nav-text">根据java.util.observerable包下的Observerable.class实现观察者模式功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实现如下-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">实现如下</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
