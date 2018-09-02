@@ -120,7 +120,7 @@
 
 
   <meta name="description" content="简介由于平时自己喜欢记录开发笔记，写一些博客，但是总想自己搭建属于自己的博客，在网上查阅了一下，发现Hexo在GitHub或者是码云上搭建博客非常给力。接下来让我们一起进入Hexo搭建博客学习吧。  Hexo什么是Hexo？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 当我们在遇到一个新东西的时候">
-<meta name="keywords" content="Hexo,Next,GitHub">
+<meta name="keywords" content="Hexo,Next,GitHub,Node">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo搭建GitHub博客--初级(一)">
 <meta property="og:url" content="http://eirunye.github.io/2018/09/01/Hexo搭建GitHub博客—初级一/index.html">
@@ -142,7 +142,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-3a90ca707717cc04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-3da4ba848a8df404.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-cb4c8c8a925effc3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500">
-<meta property="og:updated_time" content="2018-09-01T17:28:58.555Z">
+<meta property="og:updated_time" content="2018-09-02T14:07:47.246Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo搭建GitHub博客--初级(一)">
 <meta name="twitter:description" content="简介由于平时自己喜欢记录开发笔记，写一些博客，但是总想自己搭建属于自己的博客，在网上查阅了一下，发现Hexo在GitHub或者是码云上搭建博客非常给力。接下来让我们一起进入Hexo搭建博客学习吧。  Hexo什么是Hexo？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 当我们在遇到一个新东西的时候">
@@ -429,7 +429,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-09-02 01:28:58" itemprop="dateModified" datetime="2018-09-02T01:28:58+08:00">2018-09-02</time>
+                <time title="修改时间：2018-09-02 22:07:47" itemprop="dateModified" datetime="2018-09-02T22:07:47+08:00">2018-09-02</time>
               
             
           </span>
@@ -510,27 +510,30 @@
 <ul>
 <li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a></li>
 <li><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
-<li>cnpm 如果<code>npm</code>运行出错就安装<code>cnpm</code>国内镜像<br>如果没有安装那么就需要安装咯，大家可以看看<a href="https://www.jianshu.com/writer#/notebooks/10827440/notes/31436824" target="_blank" rel="noopener">Vue-cli项目创建</a>如何检查<a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a>、<a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a>和<code>cnpm</code>是否安装成功。</li>
+<li>cnpm 如果<code>npm</code>运行出错就安装<code>cnpm</code>国内镜像</li>
 </ul>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>所有必备的应用程序安装完成后，即可使用 npm或者cnpm 安装 Hexo。<br>打开Git Bash here，输入：</p>
+<p>如果没有安装那么就需要安装咯，大家可以看看<a href="https://www.jianshu.com/writer#/notebooks/10827440/notes/31436824" target="_blank" rel="noopener">Vue-cli项目创建</a>如何检查<a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a>、<a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a>和<code>cnpm</code>是否安装成功。</p>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a></h3><p>所有必备的应用程序安装完成后，即可使用npm或者cnpm来安装<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>。<br>打开Git Bash Here，输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">或者</span><br><span class="line">$ cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>检查是否安装Hexo完成,查询是否成功，显示hexo-cli 版本就说明成功了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo -V</span><br></pre></td></tr></table></figure></p>
-<h1 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h1><p>安装一切所需的程序后，我们可以开始建站了，就是创建我们的博客,大家也可以进入<a href="https://hexo.io/zh-cn/docs/setup" target="_blank" rel="noopener">建站官网</a>查看。<br>新建一个文件夹，来管理我们的博客项目，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<p>检查是否安装Hexo完成,查询是否成功，显示<code>hexo-cli</code>版本就说明成功了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo -V</span><br></pre></td></tr></table></figure></p>
+<h1 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h1><p>安装一切所需的程序后，我们可以开始建站了，就是创建我们的博客,大家也可以进入<a href="https://hexo.io/zh-cn/docs/setup" target="_blank" rel="noopener">Hexo建站官网</a>查看。<br>新建一个文件夹，来管理我们的博客项目，请执行下列命令，Hexo将会在指定文件夹中新建所需要的文件。</p>
 <h2 id="运行命令"><a href="#运行命令" class="headerlink" title="运行命令"></a>运行命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ cnpm install</span><br></pre></td></tr></table></figure>
 <ul>
-<li>注：<folder>是表示建站的博客项目名<br>打开Git Bash here，输入：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init myblog</span><br></pre></td></tr></table></figure>
-</folder></li>
+<li>注：folder是表示建站的博客项目名</li>
 </ul>
+<p>打开Git Bash Here，输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init myblog</span><br></pre></td></tr></table></figure>
 <p><img src="https://upload-images.jianshu.io/upload_images/3012005-b9f23bb1631d76e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500" alt="建站.png"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd myblog</span><br><span class="line">$ cnpm install</span><br></pre></td></tr></table></figure>
+<p>再运行以下命令：<code>myblog</code>是我创建博客站。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd myblog</span><br><span class="line">$ cnpm install</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://upload-images.jianshu.io/upload_images/3012005-7b2253a00ae12e11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500" alt="建站完成.png"></p>
 <p><img src="https://upload-images.jianshu.io/upload_images/3012005-2f2bb0a75cb6cb46.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="myblog目录.png"></p>
-<h2 id="访问URL"><a href="#访问URL" class="headerlink" title="访问URL"></a>访问URL</h2><p>我们可以运行看看Hexo是什么样的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">或者</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure></p>
+<h2 id="访问URL"><a href="#访问URL" class="headerlink" title="访问URL"></a>访问URL</h2><p>我们可以运行看看<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>创建的博客站是什么样的，运行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">或者</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 <p><img src="https://upload-images.jianshu.io/upload_images/3012005-c4566376a59b96c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500" alt="运行.png"></p>
 <p>访问URL<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:4000/</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://upload-images.jianshu.io/upload_images/3012005-52f623758fa37f13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500" alt="访问.png"></p>
-<p>好了，到这里你已经学会了通Hexo然后创建博客了，接下来我们将会分析如何将我们的博客上传到我们的GitHub服务器上呢？<br>我们如何修改我们的博客让我们的博客漂亮而且修改不同的主题来美化我们的博客呢?<br>紧跟着脚步。</p>
-<h1 id="上传到GitHub服务器"><a href="#上传到GitHub服务器" class="headerlink" title="上传到GitHub服务器"></a>上传到GitHub服务器</h1><h2 id="GitHub创建repositories"><a href="#GitHub创建repositories" class="headerlink" title="GitHub创建repositories"></a>GitHub创建repositories</h2><p> 进入<a href="https://github.com/" target="_blank" rel="noopener">GitHub官网</a>中浏览器输入<code>https://github.com/</code>,如果还没有账号就创建一个账号就好了，这里不教大家怎么注册账号了。登录自己的账号。直接new repositories 或者进入You repositories 在new repositories</p>
+<p>好了，到这里你已经学会了通过<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>创建博客了，接下来我们将会分析如何将我们的博客上传到我们的GitHub服务器上呢？<br>还有我们如何修改我们的博客让我们的博客漂亮而且修改不同的主题来美化我们的博客呢?<br>紧跟着脚步。</p>
+<h1 id="上传到GitHub"><a href="#上传到GitHub" class="headerlink" title="上传到GitHub"></a>上传到GitHub</h1><h2 id="GitHub创建repositories"><a href="#GitHub创建repositories" class="headerlink" title="GitHub创建repositories"></a>GitHub创建repositories</h2><p> 进入<a href="https://github.com/" target="_blank" rel="noopener">GitHub官网</a>中浏览器输入<code>https://github.com/</code>,如果还没有账号就创建一个账号就好了，这里不教大家怎么注册账号了。登录自己的账号。直接new repositories 或者进入You repositories 在new repositories</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/3012005-9643d73b2a601e2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500" alt="repository_1.png"></p>
 <p><img src="https://upload-images.jianshu.io/upload_images/3012005-884ba47d0d035bc7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500" alt="repository_2.png"></p>
 <p>进入到创建 repositories 页面来,这里很重要，一定要注意哦！必须将新建的repository的名字为: <strong><code>You account name</code></strong>.github.io。其他默认就好了</p>
@@ -546,7 +549,7 @@
 <p><img src="https://upload-images.jianshu.io/upload_images/3012005-16f89dd25c96aeee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500" alt="_config.yml_0.png"></p>
 <p><img src="https://upload-images.jianshu.io/upload_images/3012005-3a90ca707717cc04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500" alt="_config.yml_repository.png"></p>
 <p>在<code>_config.yml</code>找到<code>url</code>进行修改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: http://eirunye.github.io # eirunye是我的账号，修改为自己的账号</span><br></pre></td></tr></table></figure></p>
-<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><p>到这里就差不到了，接下来我们需要执行一些命令，将我们的博客部署到GitHub上了，惊喜将会到来了。<br>打开Git Bash Here进入myblog 根目录下，首先我们需要安装一下 <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a> 不然可能出现错误无法部署成功。</p>
+<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><p>到这里就差不到了，接下来我们需要执行一些命令，将我们的博客部署到GitHub上了，惊喜将会到来了。<br>打开Git Bash Here进入<code>myblog</code>根目录下，首先我们需要安装一下<a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a>不然可能出现错误，无法部署成功，执行命令行。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>然后在执行以下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
 <p>或者简写方式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></p>
@@ -555,7 +558,7 @@
 <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>我们进行访问<code>https://eirunye.github.io/</code><br>和 <code>http://localhost:4000/</code>一样的页面说明是已经成功。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/3012005-cb4c8c8a925effc3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500" alt="部署成功1.png"></p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>我们已经从如何使用Hexo到部署上GitHub上，没什么困难，需要我们对一些命令行的操作，还有一些需要我们必须注意的，一定要小心，不然就出错了。<br>当然了，我们这里只是教会大家如何使用Hexo，和部署到GitHub上，我们还未对Hexo进行一些我们对于博客的美化，还有修改成为自己独特风格的博客。希望我们继续加油吧。接下来的我们将在下一章讲到哦，请查看<a href="https://www.jianshu.com/writer#/notebooks/10827440/notes/33161742/preview" target="_blank" rel="noopener"><strong>Hexo搭建GitHub博客–初级(二)</strong></a>。</p>
-<h2 id="推荐"><a href="#推荐" class="headerlink" title="推荐"></a>推荐</h2><p>大家也可以查看关于Hexo相关文章。</p>
+<h2 id="推荐"><a href="#推荐" class="headerlink" title="推荐"></a>推荐</h2><p>大家也可以查看关于<a href="https://eirunye.github.io/categories/Hexo/">Hexo</a>相关文章。</p>
 <p><a href="https://eirunye.github.io/2018/09/01/Hexo%E6%90%AD%E5%BB%BAGitHub%E5%8D%9A%E5%AE%A2%E2%80%94%E5%88%9D%E7%BA%A7%E4%B8%80/#more"><strong>Hexo搭建GitHub博客–初级(一)</strong></a></p>
 <p><a href="https://eirunye.github.io/2018/09/01/Hexo%E6%90%AD%E5%BB%BAGitHub%E5%8D%9A%E5%AE%A2%E2%80%94%E5%88%9D%E7%BA%A7%E2%80%94%E4%BA%8C/#more"><strong>Hexo搭建GitHub博客–初级(二)</strong></a></p>
 <p><a href="https://eirunye.github.io/2018/09/02/Hexo%E6%90%AD%E5%BB%BAGitHub%E5%8D%9A%E5%AE%A2%E2%80%94%E6%89%93%E9%80%A0%E7%82%AB%E9%85%B7%E7%9A%84Next%E4%B8%BB%E9%A2%98%E2%80%94%E9%AB%98%E7%BA%A7%E2%80%94%E4%B8%89/#more"><strong>Hexo搭建GitHub博客—打造炫酷的Next主题–高级(三)</strong></a></p>
@@ -584,6 +587,8 @@
             <a href="/tags/Next/" rel="tag"><i class="fa fa-tag"></i> Next</a>
           
             <a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a>
+          
+            <a href="/tags/Node/" rel="tag"><i class="fa fa-tag"></i> Node</a>
           
         </div>
       
@@ -739,7 +744,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -816,7 +823,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo"><span class="nav-number">2.</span> <span class="nav-text">Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Hexo？"><span class="nav-number">2.1.</span> <span class="nav-text">什么是Hexo？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何使用"><span class="nav-number">3.</span> <span class="nav-text">如何使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">3.1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装所需"><span class="nav-number">3.1.1.</span> <span class="nav-text">安装所需</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">3.1.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#建站"><span class="nav-number">4.</span> <span class="nav-text">建站</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#运行命令"><span class="nav-number">4.1.</span> <span class="nav-text">运行命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问URL"><span class="nav-number">4.2.</span> <span class="nav-text">访问URL</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#上传到GitHub服务器"><span class="nav-number">5.</span> <span class="nav-text">上传到GitHub服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub创建repositories"><span class="nav-number">5.1.</span> <span class="nav-text">GitHub创建repositories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">5.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署"><span class="nav-number">6.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试"><span class="nav-number">7.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">8.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐"><span class="nav-number">8.1.</span> <span class="nav-text">推荐</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo"><span class="nav-number">2.</span> <span class="nav-text">Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Hexo？"><span class="nav-number">2.1.</span> <span class="nav-text">什么是Hexo？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何使用"><span class="nav-number">3.</span> <span class="nav-text">如何使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">3.1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装所需"><span class="nav-number">3.1.1.</span> <span class="nav-text">安装所需</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">3.1.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#建站"><span class="nav-number">4.</span> <span class="nav-text">建站</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#运行命令"><span class="nav-number">4.1.</span> <span class="nav-text">运行命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问URL"><span class="nav-number">4.2.</span> <span class="nav-text">访问URL</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#上传到GitHub"><span class="nav-number">5.</span> <span class="nav-text">上传到GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub创建repositories"><span class="nav-number">5.1.</span> <span class="nav-text">GitHub创建repositories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">5.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署"><span class="nav-number">6.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试"><span class="nav-number">7.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">8.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐"><span class="nav-number">8.1.</span> <span class="nav-text">推荐</span></a></li></ol></li></ol></div>
             
 
           </div>
