@@ -133,7 +133,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-52542b233017f778.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-052340583d4a039b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-fa289ee37e9419af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
-<meta property="og:updated_time" content="2018-09-29T13:01:49.231Z">
+<meta property="og:updated_time" content="2018-09-30T01:17:58.220Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Boot JPA操作数据(六)">
 <meta name="twitter:description" content="简介在Spring Boot项目开发中，我们操作数据库的时候一般会用到JPA或者是MyBatis框架，今天所要将的是JPA操作数据库案例。后续会说到MyBatis操作数据。大家在开发的时候，看看自己对哪个比较熟练或者是公司项目的需要来选择，上篇我们已经说了Spring Boot如何连接数据库,我们紧跟着上篇Spring Boot 连接数据库(五)的内容来进行操作。  认识JPA首先我们在遇到一个新">
@@ -403,12 +403,24 @@
                 
               
 
-              <time title="创建时间：2018-09-29 20:54:35 / 修改时间：21:01:49" itemprop="dateCreated datePublished" datetime="2018-09-29T20:54:35+08:00">2018-09-29</time>
+              <time title="创建时间：2018-09-29 20:54:35" itemprop="dateCreated datePublished" datetime="2018-09-29T20:54:35+08:00">2018-09-29</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-30 09:17:58" itemprop="dateModified" datetime="2018-09-30T09:17:58+08:00">2018-09-30</time>
               
             
           </span>
@@ -549,7 +561,7 @@
 <ul>
 <li><strong>注：</strong>这里添加注解的位置如果选择在属性上面添加的话就全部都选择在属性上面添加，本例的<code>User.class</code>,如果选择在get方法上面添加，那么全部都在get方法上面添加注解，不然有时可能获取不到数据，或者其他错误。</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="meta">@Table</span>(name = <span class="string">"user"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="meta">@GeneratedValue</span>(strategy = GenerationType.AUTO)</span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Column</span>(name = <span class="string">"username"</span>,columnDefinition = <span class="string">"VARCHAR(50) NOT NULL COMMENT '用户名不为空!"</span>,unique = <span class="keyword">true</span>)</span><br><span class="line">    <span class="meta">@NotBlank</span>(message = <span class="string">"username can't be null"</span>)</span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Column</span>(name = <span class="string">"password"</span>,columnDefinition = <span class="string">"VARCHAR(50) NOT NULL COMMENT '密码不为空!"</span>)</span><br><span class="line">    <span class="meta">@NotBlank</span>(message = <span class="string">"password can't be null"</span>)</span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Temporal</span>(TemporalType.DATE)</span><br><span class="line">    <span class="meta">@Column</span>(name = <span class="string">"create_time"</span>, columnDefinition = <span class="string">"datetime DEFAULT NULL COMMENT '创建时间'"</span>)</span><br><span class="line">    <span class="keyword">private</span> Date createTime; <span class="comment">//创建时间</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Temporal</span>(TemporalType.DATE)</span><br><span class="line">    <span class="meta">@Column</span>(name = <span class="string">"update_time"</span>, columnDefinition = <span class="string">"datetime DEFAULT NULL COMMENT '更新时间'"</span>)</span><br><span class="line">    <span class="keyword">private</span> Date updateTime;<span class="comment">//更新时间</span></span><br><span class="line"><span class="comment">// get/set方法   注：Lombok插件可以直接构建get、set方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="meta">@Table</span>(name = <span class="string">"user"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="meta">@GeneratedValue</span>(strategy = GenerationType.AUTO)</span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Column</span>(name = <span class="string">"username"</span>,columnDefinition = <span class="string">"VARCHAR(50) NOT NULL COMMENT '用户名不为空!'"</span>,unique = <span class="keyword">true</span>)</span><br><span class="line">    <span class="meta">@NotBlank</span>(message = <span class="string">"username can't be null"</span>)</span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Column</span>(name = <span class="string">"password"</span>,columnDefinition = <span class="string">"VARCHAR(50) NOT NULL COMMENT '密码不为空!'"</span>)</span><br><span class="line">    <span class="meta">@NotBlank</span>(message = <span class="string">"password can't be null"</span>)</span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Temporal</span>(TemporalType.DATE)</span><br><span class="line">    <span class="meta">@Column</span>(name = <span class="string">"create_time"</span>, columnDefinition = <span class="string">"datetime DEFAULT NULL COMMENT '创建时间'"</span>)</span><br><span class="line">    <span class="keyword">private</span> Date createTime; <span class="comment">//创建时间</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Temporal</span>(TemporalType.DATE)</span><br><span class="line">    <span class="meta">@Column</span>(name = <span class="string">"update_time"</span>, columnDefinition = <span class="string">"datetime DEFAULT NULL COMMENT '更新时间'"</span>)</span><br><span class="line">    <span class="keyword">private</span> Date updateTime;<span class="comment">//更新时间</span></span><br><span class="line"><span class="comment">// get/set方法   注：Lombok插件可以直接构建get、set方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>实体注解解释(这里讲解的是常用的)</strong></li>
 </ul>
@@ -579,7 +591,7 @@
 </tr>
 <tr>
 <td>@Column</td>
-<td><code>name = &quot;username&quot;</code>表示表的字段名为<code>username</code>，<code>columnDefinition</code>表示字段创建的SQL语句说明，第一次创建时生效</td>
+<td><code>name = &quot;username&quot;</code>表示表的字段名为<code>username</code>，<code>columnDefinition</code>表示字段创建的SQL语句说明，第一次创建时生效，<code>unique=true</code>表示该字段的值在表中是唯一的(如：用户名不能相同)</td>
 </tr>
 <tr>
 <td>@NotBlank</td>
