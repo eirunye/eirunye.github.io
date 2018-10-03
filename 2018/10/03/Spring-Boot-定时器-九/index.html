@@ -128,7 +128,7 @@
 <meta property="og:description" content="简介在项目中我们有时需要做定时任务，那么我们在Spring Boot项目中如何添加定时任务呢？非常简单，让我们一起学习吧。  配置主要是添加注解的方式进行1、在启动类Application.class中添加注解  @MapperScan(“com.example.myjpa.dao”)//mybatis的注解 @EnableScheduling//定时器注解  12345678@SpringBoo">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-06639c85d05db900.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/330">
-<meta property="og:updated_time" content="2018-10-03T06:42:59.953Z">
+<meta property="og:updated_time" content="2018-10-03T06:46:20.083Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Boot 定时器(九)">
 <meta name="twitter:description" content="简介在项目中我们有时需要做定时任务，那么我们在Spring Boot项目中如何添加定时任务呢？非常简单，让我们一起学习吧。  配置主要是添加注解的方式进行1、在启动类Application.class中添加注解  @MapperScan(“com.example.myjpa.dao”)//mybatis的注解 @EnableScheduling//定时器注解  12345678@SpringBoo">
@@ -398,7 +398,7 @@
                 
               
 
-              <time title="创建时间：2018-10-03 10:35:05 / 修改时间：14:42:59" itemprop="dateCreated datePublished" datetime="2018-10-03T10:35:05+08:00">2018-10-03</time>
+              <time title="创建时间：2018-10-03 10:35:05 / 修改时间：14:46:20" itemprop="dateCreated datePublished" datetime="2018-10-03T10:35:05+08:00">2018-10-03</time>
             
 
             
@@ -509,14 +509,8 @@
 <ul>
 <li><strong>注</strong>：这个案例主要是通过定时利用JPA操作数据的方式进行代码编写案例(案例是进行每隔2分钟就插入一条数据)，在开发项目中假如数据刷新我们可以用定时任务完成、股票类数据刷新等等。所以定时任务在后台任务中也是一个重点。</li>
 </ul>
-<blockquote>
-<p>cron表达式</p>
-</blockquote>
-<p>大家可以进入这里测试<a href="http://cron.qqe2.com/" target="_blank" rel="noopener">cron在线表达式生成工具</a><br>本篇案例中<code>&quot;0 0/2 * * * ?&quot;</code>是表示每个2分钟运行一次。</p>
-<ul>
-<li>认识cron表达式</li>
-</ul>
-<table>
+<h1 id="cron表达式"><a href="#cron表达式" class="headerlink" title="cron表达式"></a>cron表达式</h1><p>大家可以进入这里测试<a href="http://cron.qqe2.com/" target="_blank" rel="noopener">cron在线表达式生成工具</a><br>本篇案例中<code>&quot;0 0/2 * * * ?&quot;</code>是表示每个2分钟运行一次。</p>
+<h2 id="认识cron表达式"><a href="#认识cron表达式" class="headerlink" title="认识cron表达式"></a>认识cron表达式</h2><table>
 <thead>
 <tr>
 <th>名词</th>
@@ -557,10 +551,7 @@
 </tr>
 </tbody>
 </table>
-<ul>
-<li>字符解析</li>
-</ul>
-<table>
+<h2 id="字符解析"><a href="#字符解析" class="headerlink" title="字符解析"></a>字符解析</h2><table>
 <thead>
 <tr>
 <th>表达式字符</th>
@@ -598,10 +589,7 @@
 </tr>
 </tbody>
 </table>
-<ul>
-<li>举例</li>
-</ul>
-<table>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><table>
 <thead>
 <tr>
 <th>表达式</th>
@@ -985,7 +973,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#主要是添加注解的方式进行"><span class="nav-number">2.1.</span> <span class="nav-text">主要是添加注解的方式进行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下载"><span class="nav-number">3.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推荐"><span class="nav-number">5.</span> <span class="nav-text">推荐</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#主要是添加注解的方式进行"><span class="nav-number">2.1.</span> <span class="nav-text">主要是添加注解的方式进行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cron表达式"><span class="nav-number">3.</span> <span class="nav-text">cron表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#认识cron表达式"><span class="nav-number">3.1.</span> <span class="nav-text">认识cron表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符解析"><span class="nav-number">3.2.</span> <span class="nav-text">字符解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#举例"><span class="nav-number">3.3.</span> <span class="nav-text">举例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下载"><span class="nav-number">4.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推荐"><span class="nav-number">6.</span> <span class="nav-text">推荐</span></a></li></ol></div>
             
 
           </div>
