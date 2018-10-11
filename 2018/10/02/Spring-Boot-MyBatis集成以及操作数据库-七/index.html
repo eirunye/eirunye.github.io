@@ -129,7 +129,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-06639c85d05db900.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/330">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3012005-2884606ab5612d51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300">
-<meta property="og:updated_time" content="2018-10-03T06:37:32.155Z">
+<meta property="og:updated_time" content="2018-10-11T15:06:54.063Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Boot MyBatis集成以及操作数据库(七)">
 <meta name="twitter:description" content="简介我们都知道以前搭建项目的时候都是SSM(Spring+SpringMVC+MyBatis)的方式来进行的。那么我们Spring Boot项目是否也能集成MyBatis呢？进而操作数据库数据呢？答案是肯定的。本篇博文主要讲解的是Spring Boot开发项目中如何集成MyBatis，MyBatis是如何用来操作数据库？带着这样的疑问我们一起来学习吧。   认识MyBatisMyBatis是什么？">
@@ -416,7 +416,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-03 14:37:32" itemprop="dateModified" datetime="2018-10-03T14:37:32+08:00">2018-10-03</time>
+                <time title="修改时间：2018-10-11 23:06:54" itemprop="dateModified" datetime="2018-10-11T23:06:54+08:00">2018-10-11</time>
               
             
           </span>
@@ -516,7 +516,8 @@
 <p>好了，我们大概了解了一下MyBatis，那我们就从最简单的开始吧。</p>
 <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>我们需要在我们的Spring Boot项目集成MyBatis，所以现在我们就开始进行集成MyBatis到我们项目中吧。</p>
 <h2 id="在Maven创建的项目进行配置"><a href="#在Maven创建的项目进行配置" class="headerlink" title="在Maven创建的项目进行配置"></a>在<code>Maven</code>创建的项目进行配置</h2><p>1.打开<code>pom.xml</code>添加依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.mybatis&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mybatis&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="在Gradle创建的项目进行配置"><a href="#在Gradle创建的项目进行配置" class="headerlink" title="在Gradle创建的项目进行配置"></a>在<code>Gradle</code>创建的项目进行配置</h2><h2 id="或者jar包引入"><a href="#或者jar包引入" class="headerlink" title="或者jar包引入"></a>或者jar包引入</h2><p>在这里<a href="https://github.com/mybatis/mybatis-3/releases" target="_blank" rel="noopener">下载jar包</a>，然后添加在Lib目录下然后添加配置</p>
+<h2 id="在Gradle创建的项目进行配置"><a href="#在Gradle创建的项目进行配置" class="headerlink" title="在Gradle创建的项目进行配置"></a>在<code>Gradle</code>创建的项目进行配置</h2><p>添加依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h2 id="或者jar包引入"><a href="#或者jar包引入" class="headerlink" title="或者jar包引入"></a>或者jar包引入</h2><p>在这里<a href="https://github.com/mybatis/mybatis-3/releases" target="_blank" rel="noopener">下载jar包</a>，然后添加在Lib目录下然后添加配置</p>
 <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>由于我们经常需要到封装Json数据访问输出，所以这里我创建了一个comment-module依赖包，每次每个公共类或者是一些Utils包，封装在其里面，这样每个项目都可以进行引用了。不在module如创建情况这里：<a href="">创建module方式</a></p>
 <h1 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h1><p><strong>1.创建文件</strong></p>
 <pre><code class="JAVA">
@@ -527,7 +528,11 @@
 <ul>
 <li><strong>注：</strong>这里不进行Posman请求测试了，大家到时自行测试，等我们讲解该篇完成后会进行单元测试重点分析。</li>
 </ul>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h1 id="推荐"><a href="#推荐" class="headerlink" title="推荐"></a>推荐</h1><ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>1.本篇文章我们学习了Spring Boot项目如何集成MyBatis，并且进行了了数据库的基本操作。</p>
+<p>2.相关的配置文件还有操作的xml文件，创建步骤，大家要记住。</p>
+<p>3.接下来我们将深入分析MyBatis在项目中常用的功能如：分页查询等操作。</p>
+<p>4.后期的文章将会深入解析MyBatis高级使用、利用IDEA重定向自动生成xml配置文件等等。</p>
+<h1 id="推荐"><a href="#推荐" class="headerlink" title="推荐"></a>推荐</h1><ul>
 <li><p><a href="https://eirunye.github.io"><strong>我的博客https://eirunye.github.io</strong></a>进行浏览相关技术文章，大家一起相互探讨技术。</p>
 </li>
 <li><p>如果大家想了解更多的Spring Boot相关博文请进入我的<a href="https://eirunye.github.io/categories/%E5%90%8E%E5%8F%B0/Spring-Boot/"><strong>Spring Boot系列博客栈</strong></a></p>
