@@ -39,14 +39,27 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Spring-Boot-单元测试-十]]></title>
+    <title><![CDATA[Spring-Boot-单元测试(十)]]></title>
     <url>%2F2018%2F10%2F17%2FSpring-Boot-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95-%E5%8D%81%2F</url>
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[Spring-Boot-JPA分页和MyBatis分页实例-八]]></title>
+    <title><![CDATA[Spring-Boot-JPA分页和MyBatis分页实例(八)]]></title>
     <url>%2F2018%2F10%2F17%2FSpring-Boot-JPA%E5%88%86%E9%A1%B5%E5%92%8CMyBatis%E5%88%86%E9%A1%B5%E5%AE%9E%E4%BE%8B-%E5%85%AB%2F</url>
     <content type="text"></content>
+      <categories>
+        <category>后台</category>
+        <category>Spring Boot</category>
+        <category>MyBatis</category>
+        <category>JPA</category>
+        <category>分页</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring Boot</tag>
+        <tag>MyBatis</tag>
+        <tag>JPA</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[抽象工厂模式]]></title>

@@ -95,11 +95,11 @@
   </entry>
   
   <entry>
-    <title>Spring-Boot-单元测试-十</title>
+    <title>Spring-Boot-单元测试(十)</title>
     <link href="http://eirunye.github.io/2018/10/17/Spring-Boot-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95-%E5%8D%81/"/>
     <id>http://eirunye.github.io/2018/10/17/Spring-Boot-单元测试-十/</id>
     <published>2018-10-16T16:25:52.000Z</published>
-    <updated>2018-10-16T16:25:52.973Z</updated>
+    <updated>2018-12-07T15:59:32.724Z</updated>
     
     <summary type="html">
     
@@ -109,16 +109,34 @@
   </entry>
   
   <entry>
-    <title>Spring-Boot-JPA分页和MyBatis分页实例-八</title>
+    <title>Spring-Boot-JPA分页和MyBatis分页实例(八)</title>
     <link href="http://eirunye.github.io/2018/10/17/Spring-Boot-JPA%E5%88%86%E9%A1%B5%E5%92%8CMyBatis%E5%88%86%E9%A1%B5%E5%AE%9E%E4%BE%8B-%E5%85%AB/"/>
     <id>http://eirunye.github.io/2018/10/17/Spring-Boot-JPA分页和MyBatis分页实例-八/</id>
     <published>2018-10-16T16:25:05.000Z</published>
-    <updated>2018-10-16T16:25:05.819Z</updated>
+    <updated>2018-12-07T15:59:32.703Z</updated>
     
     <summary type="html">
     
     </summary>
     
+      <category term="后台" scheme="http://eirunye.github.io/categories/%E5%90%8E%E5%8F%B0/"/>
+    
+      <category term="Spring Boot" scheme="http://eirunye.github.io/categories/%E5%90%8E%E5%8F%B0/Spring-Boot/"/>
+    
+      <category term="MyBatis" scheme="http://eirunye.github.io/categories/%E5%90%8E%E5%8F%B0/Spring-Boot/MyBatis/"/>
+    
+      <category term="JPA" scheme="http://eirunye.github.io/categories/%E5%90%8E%E5%8F%B0/Spring-Boot/MyBatis/JPA/"/>
+    
+      <category term="分页" scheme="http://eirunye.github.io/categories/%E5%90%8E%E5%8F%B0/Spring-Boot/MyBatis/JPA/%E5%88%86%E9%A1%B5/"/>
+    
+    
+      <category term="Java" scheme="http://eirunye.github.io/tags/Java/"/>
+    
+      <category term="Spring Boot" scheme="http://eirunye.github.io/tags/Spring-Boot/"/>
+    
+      <category term="MyBatis" scheme="http://eirunye.github.io/tags/MyBatis/"/>
+    
+      <category term="JPA" scheme="http://eirunye.github.io/tags/JPA/"/>
     
   </entry>
   
